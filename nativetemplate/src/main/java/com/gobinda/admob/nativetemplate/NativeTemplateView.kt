@@ -184,15 +184,15 @@ class NativeTemplateView(context: Context, attrs: AttributeSet?) : FrameLayout(c
 
     private fun initView(context: Context, attr: AttributeSet?) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater?
+        val mArray = context.obtainStyledAttributes(attr, R.styleable.NativeTemplateView)
         inflater?.inflate(
-            context.obtainStyledAttributes(attr, R.styleable.NativeTemplateView).use {
-                when (it.getInt(R.styleable.NativeTemplateView_templateType, DEFAULT_TEMPLATE)) {
-                    2 -> R.layout.layout_large_template
-                    1 -> R.layout.layout_medium_template
-                    else -> R.layout.layout_small_template
-                }
+            when (mArray.getInt(R.styleable.NativeTemplateView_templateType, DEFAULT_TEMPLATE)) {
+                2 -> R.layout.layout_large_template
+                1 -> R.layout.layout_medium_template
+                else -> R.layout.layout_small_template
             }, this
         )
+        mArray.recycle()
     }
 
     public override fun onFinishInflate() {
