@@ -6,4 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".SmallAdActivity">
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ad_view_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.gobinda.admob.nativetemplate.NativeTemplateView
+            android:id="@+id/template_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:templateType="small" />
+
+    </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
