@@ -12,6 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+
+        <activity
+            android:name=".LargeAdActivity"
+            android:exported="false"
+            android:label="@string/title_large_ad" />
+
+        <activity
+            android:name=".MediumAdActivity"
+            android:exported="false"
+            android:label="@string/title_medium_ad" />
+
+        <activity
+            android:name=".SmallAdActivity"
+            android:exported="false"
+            android:label="@string/title_small_ad" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

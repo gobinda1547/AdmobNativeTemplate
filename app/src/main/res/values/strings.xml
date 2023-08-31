@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AdmobNativeTemplate</string>
+    <string name="title_small_ad">Small ad activity</string>
+    <string name="title_medium_ad">Medium ad activity</string>
+    <string name="title_large_ad">Large ad activity</string>
+    <string name="open_small_ad">Open small ad</string>
+    <string name="open_medium_ad">Open medium ad</string>
+    <string name="open_large_ad">Open large ad</string>
 </resources>
