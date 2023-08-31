@@ -25,6 +25,13 @@ class LargeAdActivity : AppCompatActivity() {
         loadNativeAd()
     }
 
+    override fun onDestroy() {
+        // As per admob document - we should destroy native ad when we are done showing
+        // our native ad, so that it could be properly garbage collected.
+        templateView.destroyNativeAd()
+        super.onDestroy()
+    }
+
     /**
      * While loading the new add, we first of all making the ad contain or ad view holder
      * INVISIBLE cause before downloading the actual ad, it will be invalid.
